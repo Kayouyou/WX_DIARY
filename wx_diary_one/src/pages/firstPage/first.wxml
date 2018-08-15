@@ -1,0 +1,16 @@
+<include src="../templates/header"/>
+
+<button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="default" hover-class="other-button-hover"> default </button>
+<button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="btnClick"> {{btnText}} </button>
+<text>{{text}}</text>
+
+<view wx:if="{{show}}">{{text}}</view>
+
+<view wx:for="{{news}}" wx:for-item="itemx">
+{{index}}-{{itemx}}
+</view>
+
+<import src="../templates/footer"/>
+<template is="footer2" data="{{text:'导入设置的内容'}}"/>

@@ -1,0 +1,15 @@
+<!--pages/myComponent/myComponent.wxml-->
+<!-- <text>pages/myComponent/myComponent.wxml</text> --> 
+<view class='my-class'>
+  
+  <view>这是组件内部实现</view>
+
+  <view>{{myProperty}}</view>
+  <button bindtap='onMyButtonTap'>Button</button>
+  <view>{{A[0].B}}</view>
+  <button bindtap='_myPrivateMethod'>_myPrivateMethod</button>
+
+
+  <slot name="before"></slot>
+  <slot name="after"></slot>
+</view>

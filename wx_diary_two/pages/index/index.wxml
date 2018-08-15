@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<!-- wxs -->
+<wxs module="m1">
+
+var msg = "hello world";
+module.exports.message = msg;
+
+var getMax = function(array){
+  var max = undefined;
+  for(var i = 0 ; i < array.length;i++){
+    max = max === undefined ? array[i] : (max >= array[i] ? max : array[i]);
+  }
+  return max;
+}
+module.exports.getMax = getMax;
+
+</wxs>
+
+<view class='view1' bindtap='view1click' id='v1' data-title='xinwen'>
+  view11
+  <view class='view2' bindtap='view2click' id='v2'>
+    view22
+    <view class='view3' catchtap='view3click' id='v3'>
+      {{m1.getMax(array)}}
+      <view class='view4'>{{m1.message}}</view>
+    </view>
+  </view>
+</view>

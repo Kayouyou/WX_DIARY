@@ -1,0 +1,10 @@
+<wxs src='./../index/comm.wxs' module="comm"/>
+<view>{{comm.msg}}</view>
+<view>{{comm.Bar(comm.Foo)}}</view>
+<view>
+<!-- 对一个自定义组件的引用 -->
+  <myComponent my-class="greenText">
+    <view slot="before">插入组件slot:before内容</view>
+    <view slot="after">插入组件slot:after内容</view>
+  </myComponent>
+</view>

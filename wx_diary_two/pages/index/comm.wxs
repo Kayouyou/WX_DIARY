@@ -1,0 +1,11 @@
+var foo = "'hello' from index";
+var bar = function(b){
+  return b;
+}
+module.exports = {
+  Foo:foo,
+  Bar:bar,
+};
+module.exports.msg = "hello guys";
+
+
